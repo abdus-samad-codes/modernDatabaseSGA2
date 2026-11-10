@@ -313,12 +313,3 @@ SELECT COUNT(*) AS people FROM Person;
 SELECT COUNT(*) AS links FROM MoviePerson;
 SHOW CREATE TABLE MoviePerson;
 ```
-
-
-### If table already exist delete the table to run the script
-```sql
--- Reset only the three assignment tables before loading sample data.
-DROP TABLE IF EXISTS MoviePerson;
-DROP TABLE IF EXISTS Movie;
-DROP TABLE IF EXISTS Person;
-```
