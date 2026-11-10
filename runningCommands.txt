@@ -1,0 +1,14 @@
+// file ssh_pair.pem should be in the same directory as the command 
+ssh -i "ssh_pair.pem" ec2-user@ec2-3-26-164-209.ap-southeast-2.compute.amazonaws.com
+
+
+//connect to the database
+mysql -h database-1.c5uw8asq28ua.ap-southeast-2.rds.amazonaws.com -P 3306 -u admin -p  7061704202
+
+
+// to run the sql file first transfer the file to the ec2 instance using this command in another terminal
+scp -i "ssh_pair.pem" ./mysql_complete.sql ec2-user@ec2-3-26-164-209.ap-southeast-2.compute.amazonaws.com:~/
+
+
+// the go to  the data base and run 
+source ./mysql.sql
