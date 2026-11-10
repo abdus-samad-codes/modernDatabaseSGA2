@@ -3,6 +3,12 @@ CREATE DATABASE IF NOT EXISTS MovieDB;
 USE MovieDB;
 SELECT DATABASE() AS current_database;
 
+-- Drop existing tables in the correct order
+DROP TABLE IF EXISTS MoviePerson;
+DROP TABLE IF EXISTS Movie;
+DROP TABLE IF EXISTS Person;
+
+
 -- Create the Movie table
 CREATE TABLE Movie (
     id INT PRIMARY KEY,
